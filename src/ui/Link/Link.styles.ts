@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 import { css } from '@emotion/core';
 
-import { colors } from '@/ui';
+import { colors } from '../styles';
 
 const linkStyles = css`
   color: ${colors.primary};
