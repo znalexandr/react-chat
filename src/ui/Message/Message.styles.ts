@@ -24,7 +24,7 @@ export const Time = styled.div`
 export const Babel = styled.div`
   display: inline-block;
   max-width: 400px;
-  padding: 15px 14px 10px;
+  padding: 14px;
   border-radius: 12px 12px 12px 0;
   background: #3674ff;
   box-shadow: 0 5px 5px rgba(54, 116, 255, 0.19);
