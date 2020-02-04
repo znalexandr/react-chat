@@ -5,7 +5,7 @@ import * as H from './Avatar.helpers';
 import * as T from './Avatar.types';
 
 export function Avatar(props: T.AvatarProps) {
-  const { id, name, imageSrc, size } = props;
+  const { id, name, imageSrc, size, className } = props;
 
   if (!id || !name) {
     return <>Invalid data</>;
@@ -15,7 +15,12 @@ export function Avatar(props: T.AvatarProps) {
   const firstChar = name[0].toUpperCase();
 
   return (
-    <S.Avatar color={color} colorLighten={colorLighten} size={size}>
+    <S.Avatar
+      className={className}
+      color={color}
+      colorLighten={colorLighten}
+      size={size}
+    >
       {imageSrc && <img src={imageSrc} alt={name} />}
       {!imageSrc && <S.Name>{firstChar}</S.Name>}
     </S.Avatar>

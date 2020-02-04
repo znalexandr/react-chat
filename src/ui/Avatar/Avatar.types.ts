@@ -5,4 +5,5 @@ export type AvatarProps = {
   name: string;
   imageSrc?: string;
   size?: AvatarSize;
+  className?: string;
 };
