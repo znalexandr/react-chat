@@ -27,7 +27,7 @@ module.exports = function exports() {
       new BundleAnalyzerPlugin({
         analyzerMode: 'server',
         analyzerHost: 'localhost',
-        analyzerPort: 7778
+        analyzerPort: 7779
       })
     );
   }
