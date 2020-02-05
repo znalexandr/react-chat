@@ -16,9 +16,33 @@ const example: MessageProps = {
   date: new Date('02.02.2020 20:00')
 };
 
+const example2: MessageProps = {
+  ...example,
+  attachment: [
+    {
+      type: 'img',
+      url: 'https://picsum.photos/id/1060/536/354?blur=2'
+    },
+    {
+      type: 'img',
+      url: 'https://picsum.photos/id/1084/536/354?grayscale'
+    }
+  ]
+};
+
 export const Basic = () => (
   <>
     <h2>Base usage</h2>
     <Message {...example} />
   </>
 );
+export const Attachment = () => (
+  <>
+    <h2>Example text with images</h2>
+    <Message {...example2} />
+  </>
+);
+
+Attachment.story = {
+  name: 'Text with images'
+};

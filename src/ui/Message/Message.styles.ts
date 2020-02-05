@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { Avatar as AvatarUI, colors } from '..';
+import { Avatar as AvatarUI, colors, Attachments as AttachmentsUI } from '..';
 
 export const Message = styled.div`
   position: relative;
@@ -29,4 +29,8 @@ export const Babel = styled.div`
   background: #3674ff;
   box-shadow: 0 5px 5px rgba(54, 116, 255, 0.19);
   color: #fff;
+`;
+
+export const Attachments = styled(AttachmentsUI)`
+  margin-top: 14px;
 `;

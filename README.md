@@ -7,3 +7,39 @@
 - `yarn ui` - запуск storybook
 - `yarn ui:build` - сборка storybook
 - `yarn build` - сборка бандла
+
+<details>
+<summary>TODO</summary>
+
+## Atoms
+
+### Attachments
+
+    - LightBox для Attachments images
+    - FileDonwloader для Attachments file
+
+### Babel
+
+### Input
+
+### Button
+
+## Moleculs
+
+### Messages
+
+- isReaded
+- isOwner
+- Voice
+
+### Dialogs
+
+## Template
+
+### Страница авторизации
+
+### Страница регистрации
+
+### Страница чата
+
+</details>

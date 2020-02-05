@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Time } from '@/services';
 
+import { AttachmentsItem } from '..';
+
 import * as S from './Message.styles';
 
 export type MessageProps = {
@@ -15,6 +17,7 @@ export type MessageProps = {
   audioUrl?: string;
   isReaded?: boolean;
   isOwner?: boolean;
+  attachment?: AttachmentsItem[];
 };
 
 export function Message(props: MessageProps) {
@@ -24,7 +27,8 @@ export function Message(props: MessageProps) {
       id: 'unknow_id',
       name: 'Unknow'
     },
-    date
+    date,
+    attachment
   } = props;
 
   const time = Time.getDistanceInWordsNow(date);
@@ -35,6 +39,7 @@ export function Message(props: MessageProps) {
         <S.Avatar id={user.id} name={user.name} size="s" />
         <div>
           <S.Babel>{text}</S.Babel>
+          {attachment && <S.Attachments data={attachment} />}
           <S.Time>{time}</S.Time>
         </div>
       </S.MessageBox>
