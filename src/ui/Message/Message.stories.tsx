@@ -26,6 +26,16 @@ const example2: MessageProps = {
     {
       type: 'img',
       url: 'https://picsum.photos/id/1084/536/354?grayscale'
+    },
+    {
+      type: 'file',
+      exp: 'jpg',
+      url: 'https://picsum.photos/id/1084/536/354?grayscale'
+    },
+    {
+      type: 'file',
+      exp: 'jpg',
+      url: 'https://picsum.photos/id/1084/536/354?grayscale'
     }
   ]
 };

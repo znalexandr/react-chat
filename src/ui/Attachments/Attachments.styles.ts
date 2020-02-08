@@ -11,6 +11,7 @@ export const Attachments = styled.div`
 `;
 
 export const AttachItem = styled.div`
+  position: relative;
   width: 64px;
   height: 64px;
   border-radius: 4px;
@@ -27,4 +28,19 @@ export const ImageThumb = styled.img`
 
 export const ImageFull = styled.img`
   display: block;
+`;
+
+export const FileDownloader = styled.a`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: ${colors.gray700};
 `;

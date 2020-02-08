@@ -14,6 +14,16 @@ const data: AttachmentsItem[] = [
   {
     type: 'img',
     url: 'https://picsum.photos/id/870/536/354?grayscale&blur=2'
+  },
+  {
+    type: 'file',
+    exp: 'jpg',
+    url: 'https://picsum.photos/id/870/536/354?grayscale&blur=2'
+  },
+  {
+    type: 'file',
+    exp: 'jpg',
+    url: 'https://picsum.photos/id/870/536/354?grayscale&blur=2'
   }
 ];
 

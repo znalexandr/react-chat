@@ -2,6 +2,7 @@ export type AttachmentsType = 'img' | 'file';
 
 export type AttachmentsItem = {
   type: AttachmentsType;
+  exp?: string;
   url: string;
 };
 
