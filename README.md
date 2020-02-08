@@ -13,10 +13,6 @@
 
 ## Atoms
 
-### Attachments
-
-    - FileDonwloader для Attachments file
-
 ### Input
 
 ### Button
