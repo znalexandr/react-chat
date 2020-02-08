@@ -15,10 +15,7 @@
 
 ### Attachments
 
-    - LightBox для Attachments images
     - FileDonwloader для Attachments file
-
-### Babel
 
 ### Input
 

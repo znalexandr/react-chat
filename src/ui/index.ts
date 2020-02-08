@@ -4,3 +4,4 @@ export * from './styles';
 export * from './Avatar';
 export * from './Attachments';
 export * from './Message';
+export * from './LightBox';

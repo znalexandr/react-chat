@@ -18,8 +18,13 @@ export const AttachItem = styled.div`
   overflow: hidden;
 `;
 
-export const Image = styled.img`
+export const ImageThumb = styled.img`
   display: block;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+`;
+
+export const ImageFull = styled.img`
+  display: block;
 `;
