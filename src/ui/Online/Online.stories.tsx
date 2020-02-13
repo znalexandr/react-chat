@@ -5,7 +5,7 @@ import { Flex } from '../Flex';
 import { Online } from './Online';
 
 export default {
-  title: 'Design System/Atoms/Online'
+  title: 'Atoms/Online'
 };
 
 export const Basic = () => (

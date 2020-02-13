@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { LightBox } from '.';
 
 export default {
-  title: 'Design System/Atoms/LightBox'
+  title: 'Atoms/LightBox'
 };
 
 export const BaseUsage = () => {

@@ -14,7 +14,7 @@ const Row = styled.div<RowProps>`
 `;
 
 export default {
-  title: 'Design System/Atoms/Avatar'
+  title: 'Atoms/Avatar'
 };
 
 const avatars: AvatarProps[] = [

@@ -3,7 +3,7 @@ import React from 'react';
 import { Attachments, AttachmentsItem } from '.';
 
 export default {
-  title: 'Design System/Molecules/Attachments'
+  title: 'Molecules/Attachments'
 };
 
 const data: AttachmentsItem[] = [

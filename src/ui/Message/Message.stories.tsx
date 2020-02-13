@@ -1,9 +1,16 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 import { Message, MessageProps } from './Message';
 
+const Messages = styled.div`
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 20px;
+`;
+
 export default {
-  title: 'Design System/Molecules/Message'
+  title: 'Molecules/Message'
 };
 
 const example: MessageProps = {
@@ -55,4 +62,35 @@ export const Attachment = () => (
 
 Attachment.story = {
   name: 'Text with images'
+};
+
+export const Read = () => (
+  <>
+    <h2>Message is read</h2>
+    <Messages>
+      <Message {...example} isRead />
+      <Message {...example} />
+    </Messages>
+  </>
+);
+
+Read.story = {
+  name: 'isRead'
+};
+
+export const Owner = () => (
+  <>
+    <h2>Message is owner</h2>
+    <Messages>
+      <Message {...example} isRead />
+      <Message {...example} isRead isOwner />
+      <Message {...example2} isRead />
+      <Message {...example2} isOwner isRead />
+      <Message {...example} isOwner />
+    </Messages>
+  </>
+);
+
+Owner.story = {
+  name: 'isOwner'
 };
