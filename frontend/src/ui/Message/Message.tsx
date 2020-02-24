@@ -2,10 +2,11 @@ import React from 'react';
 
 import { Time } from '@/services';
 
-import { AttachmentsItem } from '..';
+import { AttachmentsItem, Babel, Voice } from '..';
 
 import ReadSvg from './icons/read.svg';
 import SendSvg from './icons/send.svg';
+
 import * as S from './Message.styles';
 
 export type MessageProps = {
@@ -16,7 +17,7 @@ export type MessageProps = {
   };
   date: Date;
   text?: string;
-  audioUrl?: string;
+  voiceSrc?: string;
   isRead?: boolean;
   isOwner?: boolean;
   attachment?: AttachmentsItem[];
@@ -32,7 +33,8 @@ export function Message(props: MessageProps) {
     date,
     attachment,
     isRead,
-    isOwner
+    isOwner,
+    voiceSrc
   } = props;
 
   const time = Time.getDistanceInWordsNow(date);
@@ -42,7 +44,12 @@ export function Message(props: MessageProps) {
       <S.MessageBox isOwner={isOwner}>
         <S.Avatar id={user.id} name={user.name} size="s" />
         <S.MessageContent>
-          <S.Babel>{text}</S.Babel>
+          {(text || voiceSrc) && (
+            <Babel isOwner={isOwner}>
+              {!voiceSrc && text}
+              {voiceSrc && <Voice src={voiceSrc} isOwner={isOwner} />}
+            </Babel>
+          )}
           {attachment && <S.Attachments data={attachment} />}
           <S.Time>{time}</S.Time>
           {isOwner && (

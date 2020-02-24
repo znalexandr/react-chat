@@ -20,16 +20,6 @@ export const Time = styled.div`
   color: ${colors.gray400};
 `;
 
-export const Babel = styled.div`
-  display: inline-block;
-  max-width: 400px;
-  padding: 14px;
-  border-radius: 12px 12px 12px 0;
-  background: #3674ff;
-  box-shadow: 0 5px 5px rgba(54, 116, 255, 0.19);
-  color: #fff;
-`;
-
 export const Attachments = styled(AttachmentsUI)`
   margin-top: 14px;
 `;
@@ -65,14 +55,6 @@ export const MessageBox = styled.div<MessageBoxProps>`
       ${Time} {
         margin-right: 24px;
         text-align: right;
-      }
-
-      ${Babel} {
-        border: 1px solid #ececec;
-        border-radius: 12px 12px 0 12px;
-        background: #fff;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.02);
-        color: #202020;
       }
 
       ${Attachments} {

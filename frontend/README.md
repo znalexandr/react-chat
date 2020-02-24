@@ -18,13 +18,9 @@
 
 ## Moleculs
 
-- ### Messages
-
-  - Voice
-
 - ### Dialogs
 
-## Template
+## Pages
 
 - ### Страница авторизации
 - ### Страница регистрации
