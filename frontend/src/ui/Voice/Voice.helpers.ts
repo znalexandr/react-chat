@@ -4,7 +4,7 @@ function getDigitalFormat(val: number): string {
 
 export function convertCurrentTime(val: number): string {
   const mins = getDigitalFormat(Math.floor(val / 60));
-  const secs = getDigitalFormat(parseInt((val % 60).toFixed()));
+  const secs = getDigitalFormat(parseInt((val % 60).toFixed(), 10));
 
   return `${mins}:${secs}`;
 }

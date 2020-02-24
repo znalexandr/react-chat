@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { Babel } from './Babel';
+
 export default {
   title: 'Atoms/Babel'
 };
-
-import { Babel } from './Babel';
 
 export const Basic = () => (
   <>
