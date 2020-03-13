@@ -6,7 +6,7 @@ export type BabelProps = {
 
 export const Babel = styled.div<BabelProps>`
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   max-width: 440px;
   padding: 14px;
   border-radius: ${p => (p.isOwner ? '12px 12px 0 12px' : '12px 12px 12px 0')};

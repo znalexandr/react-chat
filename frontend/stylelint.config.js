@@ -9,6 +9,7 @@ module.exports = {
     'no-missing-end-of-source-newline': null,
     'no-invalid-double-slash-comments': null,
     'property-no-unknown': null,
+    'value-keyword-case': null,
     'order/properties-order': [
       {
         groupName: 'Positioning',
