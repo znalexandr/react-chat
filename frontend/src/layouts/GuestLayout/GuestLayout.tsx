@@ -4,21 +4,21 @@ import { version } from '../../../package.json';
 
 import * as S from './styles';
 
-type MainLayoutProps = {
+type GuestLayoutProps = {
   children: ReactNode;
 };
 
-export function MainLayout(props: MainLayoutProps) {
+export function GuestLayout(props: GuestLayoutProps) {
   const { children } = props;
 
   return (
-    <S.MainLayout>
-      <main>
+    <S.GuestLayout>
+      <S.Main>
         <S.Container>{children}</S.Container>
-      </main>
+      </S.Main>
       <S.Footer>
-        <S.Version>Version: {version}</S.Version>
+        <S.Version>RMessager version: {version}</S.Version>
       </S.Footer>
-    </S.MainLayout>
+    </S.GuestLayout>
   );
 }

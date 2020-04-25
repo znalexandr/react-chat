@@ -2,13 +2,19 @@ import React, { ReactNode, SyntheticEvent } from 'react';
 
 import * as S from './Button.styles';
 
-export type InputProps = {
+type Props = {
   text: ReactNode;
-  onClick: (value: SyntheticEvent) => void;
+  onClick?: (value: SyntheticEvent) => void;
+  type?: 'button' | 'reset' | 'submit';
+  fullWidth?: boolean;
 };
 
-export function Button(props: InputProps) {
-  const { text, onClick } = props;
+export function Button(props: Props) {
+  const { text, onClick, type, fullWidth } = props;
 
-  return <S.Button onClick={onClick}>{text}</S.Button>;
+  return (
+    <S.Button onClick={onClick} type={type} fullWidth={fullWidth}>
+      {text}
+    </S.Button>
+  );
 }
