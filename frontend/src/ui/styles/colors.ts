@@ -1,9 +1,10 @@
 export const colors = {
   primary: '#1890ff',
   primaryHover: '#40a9ff',
-  whiteMain: '#FFFFFF',
+  whiteMain: '#f2f2f2',
   blackMain: '#202020',
   black: '#000000',
+  white: '#FFFFFF',
   red: '#f5222d',
   gray100: '#fafafa',
   gray200: '#f5f5f5',

@@ -14,7 +14,7 @@ export const Input = styled.input<InputProps>`
   border: 1px solid;
   border-color: ${(p) => (p.isValid ? colors.gray300 : colors.red)};
   border-radius: 4px;
-  background: ${colors.whiteMain};
+  background: ${colors.white};
 
   font-size: 16px;
   line-height: 19px;

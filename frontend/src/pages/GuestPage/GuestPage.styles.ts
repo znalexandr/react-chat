@@ -15,7 +15,7 @@ export const Description = styled.h4`
 export const FormWrapper = styled.div`
   padding: 42px;
   border-radius: 3px;
-  background-color: ${colors.whiteMain};
+  background-color: ${colors.white};
   box-shadow: 0 0 25px ${rgba(colors.black, 0.04)};
 `;
 

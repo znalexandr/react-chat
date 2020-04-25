@@ -4,10 +4,10 @@ import { Router, Switch, Route } from 'react-router-dom';
 import { History } from '@/services';
 import { MainLayout, GuestLayout, StylesProvider } from './layouts';
 
-const HomePage = React.lazy(() => import('./pages/HomePage'));
+const MessagerPage = React.lazy(() => import('./pages/MessagerPage'));
 const GuestPage = React.lazy(() => import('./pages/GuestPage'));
 
-const isAuth = false;
+const isAuth = true;
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             {isAuth ? (
               <MainLayout>
                 <Route path="/">
-                  <HomePage />
+                  <MessagerPage />
                 </Route>
               </MainLayout>
             ) : (

@@ -11,15 +11,16 @@ const isProd = NODE_ENV === 'production';
 module.exports = function exports() {
   const plugins = [
     new HtmlPlugin({
-      template: './src/static/index.html'
+      template: './src/static/index.html',
+      favicon: './src/static/favicon.ico',
     }),
     new webpack.ProvidePlugin({
-      React: 'react'
+      React: 'react',
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.[hash].css',
-      hashDigestLength: 6
-    })
+      hashDigestLength: 6,
+    }),
   ];
 
   if (BUNDLE_ANALYZER === 'localhost') {
@@ -27,7 +28,7 @@ module.exports = function exports() {
       new BundleAnalyzerPlugin({
         analyzerMode: 'server',
         analyzerHost: 'localhost',
-        analyzerPort: 7779
+        analyzerPort: 7779,
       })
     );
   }
@@ -38,44 +39,44 @@ module.exports = function exports() {
     output: {
       path: path.resolve(__dirname, 'build'),
       publicPath: '/',
-      filename: 'bundle.js'
+      filename: 'bundle.js',
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src')
+        '@': path.resolve(__dirname, 'src'),
       },
-      extensions: ['.ts', '.tsx', '.js', '.json']
+      extensions: ['.ts', '.tsx', '.js', '.json'],
     },
     module: {
       rules: [
         {
           test: /\.tsx?$/,
           include: path.resolve(__dirname, 'src'),
-          loader: 'babel-loader'
+          loader: 'babel-loader',
         },
         {
           test: /\.(woff2|jpg|png)$/,
           include: path.resolve(__dirname, 'src'),
-          loader: 'file-loader'
+          loader: 'file-loader',
         },
         {
           test: /\.svg$/,
-          use: ['@svgr/webpack']
+          use: ['@svgr/webpack'],
         },
         {
           test: /\.css$/,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
-              options: { hmr: !isProd }
+              options: { hmr: !isProd },
             },
             {
               loader: 'css-loader',
-              options: { sourceMap: !isProd }
-            }
-          ]
-        }
-      ]
+              options: { sourceMap: !isProd },
+            },
+          ],
+        },
+      ],
     },
     plugins,
     devServer: {
@@ -85,10 +86,10 @@ module.exports = function exports() {
       stats: {
         chunks: false,
         modules: false,
-        assets: false
-      }
+        assets: false,
+      },
     },
     devtool: isProd ? 'none' : 'source-map',
-    stats: false
+    stats: false,
   };
 };

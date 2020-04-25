@@ -18,7 +18,7 @@ export const Button = styled.button<ButtonProps>`
 
   text-align: center;
   font-size: 16px;
-  color: ${colors.whiteMain};
+  color: ${colors.white};
   cursor: pointer;
 
   &:hover {
