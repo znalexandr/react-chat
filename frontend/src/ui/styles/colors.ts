@@ -2,6 +2,7 @@ export const colors = {
   primary: '#1890ff',
   primaryHover: '#40a9ff',
   whiteMain: '#FFFFFF',
+  blackMain: '#202020',
   black: '#000000',
   red: '#f5222d',
   gray100: '#fafafa',
@@ -12,5 +13,5 @@ export const colors = {
   gray600: '#8c8c8c',
   gray700: '#595959',
   gray800: '#262626',
-  green: '#00C980'
+  green: '#00C980',
 };
