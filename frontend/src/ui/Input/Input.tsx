@@ -8,10 +8,12 @@ export type InputProps = {
   placeholder?: string;
   type?: string;
   isValid?: boolean;
+  fullWidth?: boolean;
+  className?: string;
 };
 
 export function Input(props: InputProps) {
-  const { value, onChange, placeholder, type, isValid } = props;
+  const { value, onChange, placeholder, type, isValid, className } = props;
 
   function changeHandler(event: ChangeEvent<HTMLInputElement>) {
     onChange(event.target.value);
@@ -24,6 +26,7 @@ export function Input(props: InputProps) {
       placeholder={placeholder}
       type={type}
       isValid={isValid}
+      className={className}
     />
   );
 }

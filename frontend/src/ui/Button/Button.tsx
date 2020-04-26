@@ -7,13 +7,19 @@ type Props = {
   onClick?: (value: SyntheticEvent) => void;
   type?: 'button' | 'reset' | 'submit';
   fullWidth?: boolean;
+  className?: string;
 };
 
 export function Button(props: Props) {
-  const { text, onClick, type, fullWidth } = props;
+  const { text, onClick, type, fullWidth, className } = props;
 
   return (
-    <S.Button onClick={onClick} type={type} fullWidth={fullWidth}>
+    <S.Button
+      onClick={onClick}
+      type={type}
+      fullWidth={fullWidth}
+      className={className}
+    >
       {text}
     </S.Button>
   );

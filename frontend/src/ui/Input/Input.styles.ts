@@ -4,7 +4,7 @@ import { rgba } from 'polished';
 import { colors } from '@/ui';
 
 type InputProps = {
-  isValid: boolean;
+  isValid?: boolean;
 };
 
 export const Input = styled.input<InputProps>`
@@ -33,4 +33,5 @@ export const Input = styled.input<InputProps>`
 
 export const InputWrapper = styled.div`
   display: inline-block;
+  width: 100%;
 `;
