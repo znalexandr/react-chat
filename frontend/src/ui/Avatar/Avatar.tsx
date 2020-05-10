@@ -10,17 +10,11 @@ export function Avatar(props: T.AvatarProps) {
   if (!id || !name) {
     return <>Invalid data</>;
   }
-
-  const { color, colorLighten } = H.getAvatarColors(id);
+  const color = H.getAvatarColors(id);
   const firstChar = name[0].toUpperCase();
 
   return (
-    <S.Avatar
-      className={className}
-      color={color}
-      colorLighten={colorLighten}
-      size={size}
-    >
+    <S.Avatar className={className} color={color} size={size}>
       {imageSrc && <img src={imageSrc} alt={name} />}
       {!imageSrc && <S.Name>{firstChar}</S.Name>}
     </S.Avatar>

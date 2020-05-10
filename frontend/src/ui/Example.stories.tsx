@@ -5,21 +5,23 @@ import { Button } from '@storybook/react/demo';
 
 export default {
   title: 'Atoms/ExampleStories',
-  component: Button
+  component: Button,
 };
 
-export const Text = () => (
-  <Button onClick={action('clicked')}>Hello Button</Button>
-);
+export function Text() {
+  return <Button onClick={action('clicked')}>Hello Button</Button>;
+}
 
-export const Emoji = () => (
-  <Button onClick={action('clicked')}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-  </Button>
-);
+export function Emoji() {
+  return (
+    <Button onClick={action('clicked')}>
+      <span role="img" aria-label="so cool">
+        😀 😎 👍 💯
+      </span>
+    </Button>
+  );
+}
 
 Emoji.story = {
-  name: 'with emoji'
+  name: 'with emoji',
 };

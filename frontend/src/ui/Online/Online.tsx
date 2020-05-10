@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { colors } from '../styles';
 
 type OnlineProps = {
@@ -10,5 +11,5 @@ export const Online = styled.div<OnlineProps>`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: ${p => (p.isOnline ? colors.green : colors.gray400)};
+  background-color: ${(p) => (p.isOnline ? colors.green : colors.gray400)};
 `;

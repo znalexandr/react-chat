@@ -1,5 +1,3 @@
-import * as Utils from './utils';
-
-export { History } from './history';
-export { Utils };
-export { Time } from './time';
+export * from './history';
+export * as Utils from './utils';
+export * as Time from './time';

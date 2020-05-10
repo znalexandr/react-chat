@@ -1,9 +1,26 @@
 import React from 'react';
 
-import * as S from './Dialogs.styles';
+import { DialogCard, DialogCardProps, List } from '@/ui';
 
-type Props = {};
+type Dialog = DialogCardProps & { id: string };
+
+type Props = {
+  list: Dialog[];
+};
 
 export function Dialogs(props: Props) {
-  return <S.Dialogs>Dialogs</S.Dialogs>;
+  const { list } = props;
+
+  if (!list || !!list.length) {
+    return <>Нет диалогов</>;
+  }
+
+  return (
+    <List type="row">
+      {list.map((dialog) => {
+        const { id, ...rest } = dialog;
+        return <DialogCard key={id} {...rest} />;
+      })}
+    </List>
+  );
 }

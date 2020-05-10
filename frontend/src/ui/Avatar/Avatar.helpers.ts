@@ -1,4 +1,4 @@
-import { rgb, lighten, saturate } from 'polished';
+import { rgb } from 'polished';
 
 function getCorrectIndex(number: number): number {
   if (number > 255) {
@@ -12,19 +12,11 @@ function getCorrectIndex(number: number): number {
   return number;
 }
 
-type AvatarColors = {
-  color: string;
-  colorLighten: string;
-};
-
-export function getAvatarColors(hash: string): AvatarColors {
+export function getAvatarColors(hash: string): string {
   const [red, green, blue] = hash
-    .substr(0, 3)
+    .substr(3, 3)
     .split('')
-    .map(char => getCorrectIndex(char.charCodeAt(0)));
+    .map((char) => getCorrectIndex(char.charCodeAt(0)));
 
-  return {
-    color: saturate(0.1, lighten(0.1, rgb({ red, green, blue }))),
-    colorLighten: saturate(0.3, lighten(0.3, rgb({ red, green, blue })))
-  };
+  return rgb({ red, green, blue });
 }

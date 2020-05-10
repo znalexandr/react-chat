@@ -5,7 +5,6 @@ import * as T from './Avatar.types';
 type AvatarProps = {
   size?: T.AvatarSize;
   color?: string;
-  colorLighten?: string;
 };
 
 function getSize(size: T.AvatarSize) {
@@ -29,12 +28,10 @@ export const Name = styled.div`
 
 export const Avatar = styled.div<AvatarProps>`
   position: relative;
-  width: ${p => getSize(p.size)};
-  height: ${p => getSize(p.size)};
+  width: ${(p) => getSize(p.size)};
+  height: ${(p) => getSize(p.size)};
   border-radius: 50%;
-  background: ${p =>
-    p.color &&
-    `linear-gradient(135deg, ${p.color} 0%, ${p.colorLighten} 96.52%)`};
+  background-color: ${(p) => p.color};
   overflow: hidden;
 
   img {
@@ -42,6 +39,6 @@ export const Avatar = styled.div<AvatarProps>`
   }
 
   ${Name} {
-    font-size: ${p => p.size === 's' && '14px'};
+    font-size: ${(p) => p.size === 's' && '14px'};
   }
 `;

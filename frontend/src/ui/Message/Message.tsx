@@ -2,10 +2,7 @@ import React from 'react';
 
 import { Time } from '@/services';
 
-import { AttachmentsItem, Babel, Voice } from '..';
-
-import ReadSvg from './icons/read.svg';
-import SendSvg from './icons/send.svg';
+import { AttachmentsItem, Babel, Voice, Icon } from '..';
 
 import * as S from './Message.styles';
 
@@ -28,13 +25,13 @@ export function Message(props: MessageProps) {
     text,
     user = {
       id: 'unknow_id',
-      name: 'Unknow'
+      name: 'Unknow',
     },
     date,
     attachment,
     isRead,
     isOwner,
-    voiceSrc
+    voiceSrc,
   } = props;
 
   const time = Time.getDistanceInWordsNow(date);
@@ -53,7 +50,13 @@ export function Message(props: MessageProps) {
           {attachment && <S.Attachments data={attachment} />}
           <S.Time>{time}</S.Time>
           {isOwner && (
-            <S.IconWrapper>{isRead ? <ReadSvg /> : <SendSvg />}</S.IconWrapper>
+            <S.IconWrapper>
+              {isRead ? (
+                <Icon icon="read" width="15px" height="10px" />
+              ) : (
+                <Icon icon="send" width="11px" height="9px" />
+              )}
+            </S.IconWrapper>
           )}
         </S.MessageContent>
       </S.MessageBox>

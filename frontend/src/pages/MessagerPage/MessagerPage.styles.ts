@@ -9,3 +9,7 @@ export const MessagerPage = styled.div`
   background: ${colors.white};
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.04);
 `;
+
+export const LeftBar = styled.div`
+  border-right: 1px solid ${colors.gray300};
+`;

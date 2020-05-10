@@ -13,7 +13,14 @@ export type InputProps = {
 };
 
 export function Input(props: InputProps) {
-  const { value, onChange, placeholder, type, isValid, className } = props;
+  const {
+    value,
+    onChange,
+    placeholder,
+    type,
+    isValid = true,
+    className,
+  } = props;
 
   function changeHandler(event: ChangeEvent<HTMLInputElement>) {
     onChange(event.target.value);
